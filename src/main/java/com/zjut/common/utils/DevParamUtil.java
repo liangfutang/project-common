@@ -24,25 +24,45 @@ public class DevParamUtil {
         return StringUtils.isNotEmpty(json);
     }
 
+    /**
+     * 查看是否设置了dubbo分组，开发的时候，区别其他
+     * @return
+     */
     public static String getDubboGroupName() {
         String groupName = jsonObject.getString("dubbo_group");
         return StringUtils.isNotEmpty(groupName) ? groupName : null;
     }
 
+    /**
+     * 查看该启动的服务的卡夫卡开关是否关闭了
+     * @return
+     */
     public static boolean isCloseTopic() {
         String isCloseTopic = jsonObject.getString("kafka_topic_switch");
         return StringUtils.isNotEmpty(isCloseTopic) && isCloseTopic.equals("off");
     }
 
+    /**
+     * 查看该启动的服务的rocketmq开关是否关闭了
+     * @return
+     */
     public static boolean isCloseRocketMqTopic() {
         String isCloseTopic = jsonObject.getString("rocketmq_topic_switch");
         return StringUtils.isNotEmpty(isCloseTopic) && isCloseTopic.equals("off");
     }
 
+    /**
+     * 卡夫卡消费组id
+     * @return
+     */
     public static String getKafkaConsumerGroupId() {
         return jsonObject.getString("kafka_consumer_groupid");
     }
 
+    /**
+     * rocketmq消费组id
+     * @return
+     */
     public static String getRocketmqConsumerGroupid() {
         return jsonObject.getString("rocketmq_consumer_groupid");
     }
