@@ -14,4 +14,6 @@ public interface CommonConstants {
     String MD5 = "MD5";
     String HMACSHA1 = "HMACSHA1";
     String TRACE_ID = "traceId";
+
+    String POSITIVE_REGEX = "[0-9]+";
 }
