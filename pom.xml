@@ -6,12 +6,14 @@
 
     <groupId>com.zjut.common</groupId>
     <artifactId>project-common</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
 
     <properties>
         <fastjson.version>1.2.35</fastjson.version>
         <common.io.version>2.5</common.io.version>
         <commons_lang3.version>3.0</commons_lang3.version>
+        <hutool.version>5.3.9</hutool.version>
+        <oval.version>1.90</oval.version>
     </properties>
 
     <dependencies>
@@ -71,7 +73,6 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>4.3.10.RELEASE</version>
-            <scope>provided</scope>
         </dependency>
 <!--        <dependency>-->
 <!--            <groupId>org.springframework.boot</groupId>-->
@@ -83,6 +84,16 @@
             <artifactId>servlet-api</artifactId>
             <version>2.5</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <artifactId>hutool-all</artifactId>
+            <groupId>cn.hutool</groupId>
+            <version>${hutool.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.oval</groupId>
+            <artifactId>oval</artifactId>
+            <version>${oval.version}</version>
         </dependency>
     </dependencies>
 
