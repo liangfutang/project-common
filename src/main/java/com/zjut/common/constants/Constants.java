@@ -1,6 +1,6 @@
 package com.zjut.common.constants;
 
-public interface CommonConstants {
+public interface Constants {
     String XAPPID = "X-APP-ID";
     String XSIGNATURE = "X-SIGNATURE";
     String AUTHORIZATION = "Authorization";

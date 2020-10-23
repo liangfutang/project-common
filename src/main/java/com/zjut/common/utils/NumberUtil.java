@@ -1,6 +1,6 @@
 package com.zjut.common.utils;
 
-import com.zjut.common.constants.CommonConstants;
+import com.zjut.common.constants.Constants;
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -17,7 +17,7 @@ public class NumberUtil {
         if (StringUtils.isBlank(str)) {
             throw new RuntimeException("非法入参");
         }
-        return str.matches(CommonConstants.POSITIVE_REGEX);
+        return str.matches(Constants.POSITIVE_REGEX);
     }
 
     /**
@@ -30,7 +30,7 @@ public class NumberUtil {
         if (StringUtils.isBlank(str)) {
             throw new RuntimeException("非法入参");
         }
-        return str.matches(CommonConstants.POSITIVE_REGEX) && !"0".equals(str);
+        return str.matches(Constants.POSITIVE_REGEX) && !"0".equals(str);
     }
 
 }
