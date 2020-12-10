@@ -14,6 +14,11 @@ public interface Constants {
     String MD5 = "MD5";
     String HMACSHA1 = "HMACSHA1";
     String TRACE_ID = "traceId";
+    String X_USERNAME = "x-username";
+    String X_REQUEST_ID = "x-request-id";
+    String X_UID = "x-uid";
 
     String POSITIVE_REGEX = "[0-9]+";
+
+    String RESULT = "result";
 }
