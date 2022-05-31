@@ -18,8 +18,8 @@ public class WebExceptionHandler {
     public WebExceptionHandler() {
     }
 
-    @ExceptionHandler({ZjutException.class})
-    public ResponseEntity<?> operateExp(ZjutException ex, HttpServletRequest request) {
+    @ExceptionHandler({ServiceException.class})
+    public ResponseEntity<?> operateExp(ServiceException ex, HttpServletRequest request) {
         this.logger.error("处理" + request.getRequestURI() + "请求系统业务异常,如下:", ex.getMessage());
         HttpStatus status = ex.getStatus();
 

@@ -1,13 +1,13 @@
 package com.zjut.common.base;
 
 
-import com.zjut.common.enums.ResultCode;
+import com.zjut.common.enums.ResultCodeEnum;
 import org.springframework.http.HttpStatus;
 
 public class BaseResult<T> extends BaseObject {
 
     private Boolean isSuccess = Boolean.FALSE;
-    private String code = ResultCode.FAILURE.getCode();
+    private String code = ResultCodeEnum.FAILURE.getCode();
     private String message;
     private String hint;
 
@@ -75,24 +75,24 @@ public class BaseResult<T> extends BaseObject {
         this.httpStatus = httpStatus;
     }
 
-    public void error(HttpStatus httpStatus, ResultCode resultCode, String hint, String sessionId) {
+    public void error(HttpStatus httpStatus, ResultCodeEnum resultCode, String hint, String sessionId) {
         this.httpStatus = httpStatus;
         this.code = resultCode.getCode();
-        this.message = resultCode.getName();
+        this.message = resultCode.getMessage();
         this.hint = hint;
         this.sessionId = sessionId;
     }
 
-    public void error(HttpStatus httpStatus, ResultCode resultCode, String hint) {
+    public void error(HttpStatus httpStatus, ResultCodeEnum resultCode, String hint) {
         this.httpStatus = httpStatus;
         this.code = resultCode.getCode();
-        this.message = resultCode.getName();
+        this.message = resultCode.getMessage();
         this.hint = hint;
     }
 
-    public void error(HttpStatus httpStatus, ResultCode resultCode) {
+    public void error(HttpStatus httpStatus, ResultCodeEnum resultCode) {
         this.httpStatus = httpStatus;
         this.code = resultCode.getCode();
-        this.message = resultCode.getName();
+        this.message = resultCode.getMessage();
     }
 }

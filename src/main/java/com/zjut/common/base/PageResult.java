@@ -3,7 +3,6 @@ package com.zjut.common.base;
 
 import lombok.Data;
 
-
 @Data
 public class PageResult<T> extends BaseResult<T> {
 

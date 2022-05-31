@@ -6,7 +6,8 @@
 
     <groupId>com.zjut.common</groupId>
     <artifactId>project-common</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <!--  为区别于私有项目中公共工程的使用，此处的版本定义使用两位  -->
+    <version>1.1-SNAPSHOT</version>
 
     <properties>
         <hutool.version>5.5.2</hutool.version>
@@ -23,12 +24,14 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>${fastjson.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>

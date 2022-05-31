@@ -1,12 +1,13 @@
 package com.zjut.common.exception;
 
-import com.zjut.common.enums.ResultCode;
+import com.zjut.common.enums.ResultCodeEnum;
 import org.springframework.http.HttpStatus;
 
 /**
  * 自定义全局最大的异常
+ * @author jack
  */
-public class ZjutException extends Exception {
+public class ServiceException extends Exception {
 
     private String code;
 
@@ -40,50 +41,50 @@ public class ZjutException extends Exception {
         this.hint = hint;
     }
 
-    private ZjutException() {
+    private ServiceException() {
     }
 
-    public ZjutException(String message) {
+    public ServiceException(String message) {
         super(message);
-        this.code = ResultCode.INTERNAL_SERVER_ERROR.getCode();
+        this.code = ResultCodeEnum.INTERNAL_SERVER_ERROR.getCode();
         this.status = HttpStatus.INTERNAL_SERVER_ERROR;
     }
 
-    public ZjutException(String code, HttpStatus status, String message) {
+    public ServiceException(String code, HttpStatus status, String message) {
         super(message);
         this.code = code;
         this.status = status;
     }
 
-    public ZjutException(HttpStatus status, String code, String message, String hint) {
+    public ServiceException(HttpStatus status, String code, String message, String hint) {
         super(message);
         this.code = code;
         this.status = status;
         this.hint = hint;
     }
 
-    public ZjutException(String code, HttpStatus status, String message, String sessionId) {
+    public ServiceException(String code, HttpStatus status, String message, String sessionId) {
         super(message);
         this.code = code;
         this.status = status;
         this.sessionId = sessionId;
     }
 
-    public ZjutException(String code, HttpStatus status, String message, Throwable cause) {
+    public ServiceException(String code, HttpStatus status, String message, Throwable cause) {
         super(message, cause);
-        this.code = ResultCode.INTERNAL_SERVER_ERROR.getCode();
+        this.code = ResultCodeEnum.INTERNAL_SERVER_ERROR.getCode();
         this.status = status;
     }
 
-    public ZjutException(String message, Throwable cause) {
+    public ServiceException(String message, Throwable cause) {
         super(message, cause);
-        this.code = ResultCode.INTERNAL_SERVER_ERROR.getCode();
+        this.code = ResultCodeEnum.INTERNAL_SERVER_ERROR.getCode();
         this.status = HttpStatus.INTERNAL_SERVER_ERROR;
     }
 
-    public ZjutException(Throwable cause) {
+    public ServiceException(Throwable cause) {
         super(cause);
-        this.code = ResultCode.INTERNAL_SERVER_ERROR.getCode();
+        this.code = ResultCodeEnum.INTERNAL_SERVER_ERROR.getCode();
         this.status = HttpStatus.INTERNAL_SERVER_ERROR;
     }
 
