@@ -7,7 +7,7 @@ import org.springframework.http.HttpStatus;
  * 自定义全局最大的异常
  * @author jack
  */
-public class ServiceException extends Exception {
+public class ServiceException extends RuntimeException {
 
     private String code;
 
